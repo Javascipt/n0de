@@ -1,0 +1,29 @@
+{
+  "name": "n0de",
+  "version": "1.0.0",
+  "description": "Better pre-require modules for node",
+  "main": "n0de.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "n0de": "./n0de.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Javascipt/n0de.git"
+  },
+  "keywords": [
+    "pre-require",
+    "require",
+    "load",
+    "preload"
+  ],
+  "author": "Khalid Rehioui <Rehioui@gmail.com> (http://github.com/javascipt)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Javascipt/n0de/issues"
+  },
+  "homepage": "https://github.com/Javascipt/n0de#readme"
+}
