@@ -8,7 +8,7 @@
   },
   "preferGlobal": true,
   "bin": {
-    "n0de": "./n0de.js"
+    "n0de": "./bin"
   },
   "repository": {
     "type": "git",
