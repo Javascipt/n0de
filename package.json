@@ -1,6 +1,6 @@
 {
   "name": "n0de",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Better pre-require modules for node",
   "main": "n0de.js",
   "scripts": {

@@ -3,6 +3,14 @@ n0de
 
 A simple and easy way to run node with already required modules, usually used for manual testing.
 
+## How to installed ?
+
+```bash
+$ [sudo] npm install -g n0de
+```
+
+## How does it work ?
+
 ```bash
 $ n0de lo:lodash
 > typeof lo
