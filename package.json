@@ -5,7 +5,7 @@
   "main": "n0de.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "postinstall": "chmod gou+w ./cmd ./modules.json"
+    "postinstall": "chmod gou+w ./cmd ./params.json"
   },
   "preferGlobal": true,
   "bin": {

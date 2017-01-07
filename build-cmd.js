@@ -5,8 +5,9 @@ var args    = [];
 var cmd     = '';
 var install = false;
 var toInst  = [];
+var params  = { path : process.argv[2] };
 
-process.argv.slice(2).forEach(function (arg) {
+process.argv.slice(3).forEach(function (arg) {
     if(arg == '-i') {
         install = true;
     } else if(arg.indexOf(':') > -1) {
@@ -18,16 +19,17 @@ process.argv.slice(2).forEach(function (arg) {
 });
 
 if(install && Object.keys(modules).length) {
-    cmd += 'npm install ' + Object.keys(modules).map(function (mod) {
+    cmd = 'npm install ' + Object.keys(modules).map(function (mod) {
         return modules[mod];
     }) + ' && ';
 }
 
-cmd += 'node -r ' + path.join(__dirname, './n0de.js') + ' ' + args.join(' ');
+cmd             = cmd + 'node -r ' + path.join(__dirname, './n0de.js') + ' ' + args.join(' ');
+params.modules  = modules;
 
 fs.writeFile(path.join(__dirname, './cmd'), cmd,function (err) {
     if (err) throw err;
-    fs.writeFile(path.join(__dirname, './modules.json'), JSON.stringify(modules), function (err) {
+    fs.writeFile(path.join(__dirname, './params.json'), JSON.stringify(params), function (err) {
         if (err) throw err;
     })
 });
