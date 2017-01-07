@@ -1,1 +1,2 @@
-node build-cmd.js "$@" && ./cmd
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )/../lib/node_modules/n0de/"
+node $DIR/build-cmd.js $pwd "$@" && $DIR/cmd
