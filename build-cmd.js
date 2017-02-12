@@ -21,7 +21,7 @@ process.argv.slice(3).forEach(function (arg) {
 if(install && Object.keys(modules).length) {
     cmd = 'npm install ' + Object.keys(modules).map(function (mod) {
         return modules[mod];
-    }) + ' && ';
+    }).join(' ') + ' && ';
 }
 
 cmd             = cmd + 'node -r ' + path.join(__dirname, './n0de.js') + ' ' + args.join(' ');
